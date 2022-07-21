@@ -2,7 +2,7 @@ import React from "react";
 import stopwatch from "../Assets/stopwatch.svg";
 import chat from "../Assets/chat.svg";
 
-const Card = ({ status, time, price, hours, image, img }) => {
+const Card = ({ status, time, price, hours, image, img, name }) => {
   return (
     <>
       <div className="card mb-3">
@@ -28,13 +28,16 @@ const Card = ({ status, time, price, hours, image, img }) => {
             <div className="w-100 d-flex justify-content-between">
               <p className="text-muted">View Order</p>
             </div>
-            <div className=" w-100">
+            <div className=" w-100 d-flex justify-content-between">
               <img src={chat} alt="chat_img" className="me-4"/>
+             <div>
+             <p className="mb-1">{name}</p>
               <img
                 src={img}
                 alt="profile_img"
                 className="img-fluid profile_img"
               />
+              </div>
             </div>
             <div></div>
           </div>
